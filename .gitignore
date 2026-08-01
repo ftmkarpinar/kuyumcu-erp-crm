@@ -1,0 +1,39 @@
+# ---- Gizli bilgiler (ASLA depoya girmemeli) ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---- Veritabanı yedekleri (gerçek müşteri verisi içerir) ----
+kuyumcu-yedekler/
+yedek-*/
+*.bson
+dump/
+
+# ---- Bağımlılıklar ----
+node_modules/
+
+# ---- Derleme çıktıları ----
+dist/
+build/
+coverage/
+
+# ---- Arşivler ----
+*.zip
+*.tar
+*.tar.gz
+
+# ---- İşletim sistemi / editör ----
+.DS_Store
+.idea/
+*.swp
+
+# ---- Loglar ----
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---- Kişisel notlar ----
+notes.md

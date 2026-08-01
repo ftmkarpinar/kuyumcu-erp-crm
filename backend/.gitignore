@@ -1,0 +1,13 @@
+# gizli bilgiler
+.env
+.env.local
+.env.*
+!.env.example
+
+node_modules/
+*.zip
+.DS_Store
+.idea
+notes.md
+
+*.pdf

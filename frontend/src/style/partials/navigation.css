@@ -1,0 +1,105 @@
+.navigation {
+  position: sticky;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #111111 !important;
+  border-right: none !important;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Ant Design Sider arka planı */
+.navigation.ant-layout-sider,
+.navigation .ant-layout-sider-children,
+.navigation .ant-layout-sider-trigger {
+  background: #111111 !important;
+}
+
+/* Menü arka planı */
+.navigation .ant-menu,
+.navigation .ant-menu-light,
+.navigation .ant-menu-root {
+  background: #111111 !important;
+  border-inline-end: none !important;
+}
+
+/* Menü item normal hali */
+.navigation .ant-menu-light .ant-menu-item,
+.navigation .ant-menu-light .ant-menu-item a,
+.navigation .ant-menu-light .ant-menu-item .anticon {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* Menü item hover */
+.navigation .ant-menu-light .ant-menu-item:hover,
+.navigation .ant-menu-light .ant-menu-item:hover a,
+.navigation .ant-menu-light .ant-menu-item:hover .anticon {
+  color: #d4a843 !important;
+  background: rgba(212, 168, 67, 0.08) !important;
+}
+
+/* Seçili menü item */
+.navigation .ant-menu-light .ant-menu-item-selected,
+.navigation .ant-menu-light .ant-menu-item-selected a,
+.navigation .ant-menu-light .ant-menu-item-selected .anticon {
+  color: #d4a843 !important;
+  background: rgba(212, 168, 67, 0.12) !important;
+  font-weight: 600;
+}
+
+/* Seçili item sol çizgisi */
+.navigation .ant-menu-light .ant-menu-item-selected::after {
+  border-inline-end: 3px solid #d4a843 !important;
+}
+
+.logo {
+  height: 64px;
+  margin: 0;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 8px;
+}
+
+.sidebar-wraper {
+  background: #111111;
+  display: block;
+}
+
+.mobile-sidebar-wraper {
+  display: none;
+}
+
+.mobile-sidebar-wraper .ant-drawer-body {
+  padding: 12px 0px !important;
+  background: #111111 !important;
+}
+
+.tabsNavigation span {
+  background-color: transparent;
+}
+
+.tabsNavigation:hover span {
+  box-shadow: 0px 0px 30px 8px rgba(212, 168, 67, 0.15);
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar-wraper {
+    display: none;
+  }
+
+  .navigation {
+    height: 100%;
+  }
+
+  .mobile-sidebar-wraper {
+    display: block;
+  }
+}

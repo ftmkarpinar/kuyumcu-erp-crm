@@ -1,0 +1,1053 @@
+/* ══════════════════════════════════════
+   INDUSTRIAL DARK MODE
+   ══════════════════════════════════════ */
+
+:root {
+  --bg-base:    #0a0a0a;
+  --bg-panel:   #141414;
+  --bg-card:    #1a1a1a;
+  --bg-hover:   #222222;
+  --border:     rgba(255, 255, 255, 0.07);
+  --border-md:  rgba(255, 255, 255, 0.12);
+  --gold:       #d4890e;
+  --gold-glow:  rgba(212, 137, 14, 0.25);
+  --gold-dim:   rgba(212, 137, 14, 0.08);
+  --text-1:     rgba(255, 255, 255, 0.87);
+  --text-2:     rgba(255, 255, 255, 0.55);
+  --text-3:     rgba(255, 255, 255, 0.30);
+  --mono:       'JetBrains Mono', monospace;
+  --sans:       'Inter', -apple-system, sans-serif;
+}
+
+/* ── Body & Layout ── */
+body {
+  background: var(--bg-base) !important;
+  font-family: var(--sans) !important;
+  color: var(--text-1) !important;
+}
+
+.ant-layout,
+.ant-layout-content {
+  background: var(--bg-base) !important;
+}
+
+/* ── Header ── */
+.ant-layout-header {
+  background: rgba(10, 10, 10, 0.95) !important;
+  border-bottom: 1px solid var(--border) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* ── Cards ── */
+.ant-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.ant-card:hover {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 18px var(--gold-glow) !important;
+}
+
+.ant-card-head {
+  background: transparent !important;
+  border-bottom: 1px solid var(--border) !important;
+  color: var(--text-1) !important;
+}
+
+.ant-card-head-title {
+  color: var(--text-1) !important;
+}
+
+.ant-card-body {
+  color: var(--text-1) !important;
+}
+
+/* ── Statistic ── */
+.ant-statistic-title {
+  color: var(--text-2) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  font-family: var(--mono) !important;
+}
+
+.ant-statistic-content {
+  font-family: var(--mono) !important;
+}
+
+/* ── Table ── */
+.ant-table {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+
+.ant-table-container {
+  background: var(--bg-card) !important;
+}
+
+.ant-table-thead > tr > th {
+  background: #111111 !important;
+  color: var(--text-2) !important;
+  border-bottom: 1px solid var(--border-md) !important;
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+
+.ant-table-tbody > tr > td {
+  background: var(--bg-card) !important;
+  color: var(--text-1) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: var(--bg-hover) !important;
+}
+
+.ant-table-placeholder {
+  background: var(--bg-card) !important;
+  color: var(--text-3) !important;
+}
+
+.ant-empty-description {
+  color: var(--text-3) !important;
+}
+
+/* ── Pagination ── */
+.ant-pagination-item {
+  background: var(--bg-card) !important;
+  border-color: var(--border-md) !important;
+}
+
+.ant-pagination-item a {
+  color: var(--text-2) !important;
+}
+
+.ant-pagination-item-active {
+  background: var(--gold-dim) !important;
+  border-color: var(--gold) !important;
+}
+
+.ant-pagination-item-active a {
+  color: var(--gold) !important;
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  background: var(--bg-card) !important;
+  border-color: var(--border-md) !important;
+  color: var(--text-2) !important;
+}
+
+/* ── Input / Select / DatePicker ── */
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-select-selector,
+.ant-picker {
+  background: #111111 !important;
+  border-color: var(--border-md) !important;
+  color: var(--text-1) !important;
+}
+
+.ant-input::placeholder,
+.ant-select-selection-placeholder,
+.ant-picker-input input::placeholder {
+  color: var(--text-3) !important;
+}
+
+.ant-input:focus,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused,
+.ant-select-focused .ant-select-selector,
+.ant-picker-focused {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 2px var(--gold-glow) !important;
+}
+
+.ant-select-arrow {
+  color: var(--text-3) !important;
+}
+
+/* Şifre göster/gizle ikonu */
+.ant-input-password-icon,
+.ant-input-password-icon:hover {
+  color: var(--text-2) !important;
+}
+
+.ant-select-dropdown {
+  background: #1a1a1a !important;
+  border: 1px solid var(--border-md) !important;
+}
+
+.ant-select-item {
+  color: var(--text-1) !important;
+}
+
+.ant-select-item-option-active,
+.ant-select-item-option-selected {
+  background: var(--gold-dim) !important;
+  color: var(--gold) !important;
+}
+
+.ant-picker-panel-container {
+  background: #1a1a1a !important;
+  border: 1px solid var(--border-md) !important;
+}
+
+.ant-picker-header,
+.ant-picker-header button,
+.ant-picker-content th,
+.ant-picker-cell .ant-picker-cell-inner {
+  color: var(--text-1) !important;
+}
+
+.ant-picker-cell-in-view .ant-picker-cell-inner {
+  color: var(--text-1) !important;
+}
+
+.ant-picker-cell-selected .ant-picker-cell-inner {
+  background: var(--gold) !important;
+}
+
+/* ── Form ── */
+.ant-form-item-label > label {
+  color: var(--text-2) !important;
+  font-size: 12px !important;
+  letter-spacing: 0.04em !important;
+}
+
+/* ── Modal ── */
+.ant-modal-content {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-md) !important;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.6) !important;
+}
+
+.ant-modal-header {
+  background: transparent !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.ant-modal-title {
+  color: var(--text-1) !important;
+  font-family: var(--mono) !important;
+}
+
+.ant-modal-close {
+  color: var(--text-2) !important;
+}
+
+.ant-modal-footer {
+  border-top: 1px solid var(--border) !important;
+}
+
+/* ── Buttons ── */
+.ant-btn-default {
+  background: transparent !important;
+  border-color: var(--border-md) !important;
+  color: var(--text-2) !important;
+}
+
+.ant-btn-default:hover {
+  border-color: var(--gold) !important;
+  color: var(--gold) !important;
+}
+
+.ant-btn-primary {
+  background: var(--gold) !important;
+  border-color: var(--gold) !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+}
+
+.ant-btn-primary:hover {
+  background: #e09a1a !important;
+  border-color: #e09a1a !important;
+  box-shadow: 0 0 14px var(--gold-glow) !important;
+}
+
+.ant-btn-dangerous {
+  background: transparent !important;
+  border-color: rgba(255,77,79,0.4) !important;
+  color: #ff4d4f !important;
+}
+
+/* ── Tags — sadece renksiz (default) tagları koyu yap, renkli olanları koru ── */
+.ant-tag:not([class*="ant-tag-"]) {
+  background: rgba(255,255,255,0.06) !important;
+  border-color: var(--border-md) !important;
+  color: var(--text-1) !important;
+}
+
+/* ── Popconfirm / Tooltip ── */
+.ant-popover-inner {
+  background: #1a1a1a !important;
+  border: 1px solid var(--border-md) !important;
+}
+
+.ant-popover-message-icon {
+  color: var(--gold) !important;
+}
+
+.ant-tooltip-inner {
+  background: #1a1a1a !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-1) !important;
+}
+
+/* ── Drawer (mobil sidebar) ── */
+.ant-drawer-content {
+  background: #0f172a !important;
+}
+
+.ant-drawer-header {
+  background: #0f172a !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+/* ── Beyaz arkaplan override — tüm açık arka planları kapat ── */
+
+/* whiteBox class override */
+.whiteBox {
+  background: var(--bg-card) !important;
+  color: var(--text-1) !important;
+}
+
+.shadow {
+  border: 1px solid var(--border) !important;
+}
+
+.shadow:hover {
+  border: 1px solid var(--border-md) !important;
+}
+
+/* TopCard başlık rengi */
+.whiteBox h2 {
+  color: var(--text-1) !important;
+}
+
+/* Tablo sağ taraf scroll gölgesi beyazlığı */
+.ant-table-cell-fix-right,
+.ant-table-cell-fix-left {
+  background: var(--bg-card) !important;
+}
+
+.ant-table-ping-right .ant-table-cell-fix-right-first::after,
+.ant-table-ping-right .ant-table-cell-fix-right-last::after,
+.ant-table-ping-left .ant-table-cell-fix-left-first::after,
+.ant-table-ping-left .ant-table-cell-fix-left-last::after {
+  box-shadow: none !important;
+}
+
+/* Tablo header sağ beyaz alan */
+.ant-table-thead .ant-table-cell-fix-right,
+.ant-table-thead .ant-table-cell-fix-left {
+  background: #111111 !important;
+}
+
+/* Tüm white/light arka planları yok et */
+.site-layout-background,
+.ant-layout-content > div,
+.tabContent {
+  background: transparent !important;
+}
+
+/* Tabs Row wrapper */
+.ant-row.tabContent {
+  background: transparent !important;
+}
+
+/* ── */
+.ant-tabs-content-holder,
+.ant-tabs-tabpane,
+.ant-tabs-content,
+.ant-tabs {
+  background: transparent !important;
+  color: var(--text-1) !important;
+}
+
+.ant-tabs-tab {
+  color: var(--text-2) !important;
+}
+
+.ant-tabs-nav {
+  background: transparent !important;
+}
+
+/* Profil bilgi kartı */
+div[style*="background: #f9f9f9"],
+div[style*="background: rgb(249, 249, 249)"] {
+  background: var(--bg-card) !important;
+  border-color: var(--border) !important;
+}
+
+/* Genel white box */
+div[style*="background: #fff"],
+div[style*="background: white"],
+div[style*="background: rgb(255, 255, 255)"] {
+  background: var(--bg-base) !important;
+}
+
+div[style*="background: #f4f6fb"],
+div[style*="background: rgb(244, 246, 251)"] {
+  background: var(--bg-base) !important;
+}
+
+/* Settings sayfası sağ panel */
+.ant-layout-sider-light {
+  background: var(--bg-card) !important;
+}
+
+/* Alert */
+.ant-alert {
+  background: var(--bg-card) !important;
+  border-color: var(--border-md) !important;
+}
+
+.ant-alert-message,
+.ant-alert-description {
+  color: var(--text-1) !important;
+}
+
+/* Divider ── */
+.ant-divider {
+  border-color: var(--border) !important;
+}
+
+.ant-divider-inner-text {
+  color: var(--text-3) !important;
+  font-size: 11px !important;
+}
+
+/* ── Upload ── */
+.ant-upload-list-item {
+  color: var(--text-1) !important;
+}
+
+/* ── Avatar ── */
+.ant-avatar {
+  border: 1px solid var(--border-md) !important;
+}
+
+/* ── Progress ── */
+.ant-progress-bg {
+  background: var(--gold) !important;
+}
+
+/* ── Tablo scrollbar placeholder hücresi ── */
+.ant-table-cell-scrollbar,
+.ant-table-cell-scrollbar:not([rowspan]) {
+  background: #111111 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.ant-table-header {
+  overflow: hidden !important;
+  background: #111111 !important;
+  border: none !important;
+}
+
+.ant-table-header table {
+  background: #111111 !important;
+}
+
+/* Tablo son sütun sağ border çizgisi */
+.ant-table-thead > tr > th:last-child,
+.ant-table-tbody > tr > td:last-child {
+  border-right: none !important;
+}
+
+/* Scrollbar compensator beyaz çizgisi */
+.ant-table-content,
+.ant-table-body {
+  border-right: none !important;
+}
+
+.ant-table-container::after,
+.ant-table-container::before {
+  box-shadow: none !important;
+  display: none !important;
+}
+
+/* Tüm th'leri agresif şekilde koyu yap */
+.ant-table-wrapper .ant-table-thead > tr > th,
+.ant-table-wrapper .ant-table-thead > tr > td {
+  background: #111111 !important;
+}
+
+/* ── Tablo sticky sütun — tüm durumlar ── */
+.ant-table-cell-fix-right,
+.ant-table-cell-fix-left,
+th.ant-table-cell-fix-right,
+th.ant-table-cell-fix-left,
+td.ant-table-cell-fix-right,
+td.ant-table-cell-fix-left {
+  background: var(--bg-card) !important;
+}
+
+.ant-table-thead th.ant-table-cell-fix-right,
+.ant-table-thead th.ant-table-cell-fix-left {
+  background: #111111 !important;
+}
+
+.ant-table-tbody > tr:hover > td.ant-table-cell-fix-right,
+.ant-table-tbody > tr:hover > td.ant-table-cell-fix-left {
+  background: var(--bg-hover) !important;
+}
+
+/* scroll gölge çizgilerini kaldır */
+.ant-table-ping-right:not(.ant-table-has-fix-right) .ant-table-container::after,
+.ant-table-ping-right .ant-table-cell-fix-right-first::after,
+.ant-table-ping-right .ant-table-cell-fix-right-last::after,
+.ant-table-ping-left .ant-table-cell-fix-left-first::after,
+.ant-table-ping-left .ant-table-cell-fix-left-last::after {
+  box-shadow: none !important;
+}
+
+/* ── Tabs (Ayarlar sayfası) ── */
+.ant-tabs-tab {
+  color: var(--text-2) !important;
+}
+
+.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--gold) !important;
+}
+
+.ant-tabs-ink-bar {
+  background: var(--gold) !important;
+}
+
+/* ── Page titles ── */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-1) !important;
+  font-family: var(--sans) !important;
+}
+
+/* ── Bento Grid ── */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.bento-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 20px 24px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 20px var(--gold-glow);
+}
+
+.bento-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-glow), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bento-card:hover::before {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bento-card[style*="span 2"] {
+    grid-column: span 2 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .bento-card[style*="span 2"],
+  .bento-card[style*="1 / -1"] {
+    grid-column: 1 !important;
+  }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* ── Checkbox label rengi (Beni Hatırla vb.) ── */
+.ant-checkbox-wrapper {
+  color: var(--gold) !important;
+}
+
+.ant-checkbox-wrapper span:not(.ant-checkbox) {
+  color: var(--gold) !important;
+}
+
+/* Checkbox kutucuğu kenarlığı */
+.ant-checkbox .ant-checkbox-inner {
+  background: transparent !important;
+  border-color: var(--gold) !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background: var(--gold) !important;
+  border-color: var(--gold) !important;
+}
+
+/* ═══════════════════════════════════════════════════
+   KARA YAZILARI AÇIK RENGE ÇEVİR
+   ═══════════════════════════════════════════════════ */
+
+/* Genel başlık ve metin elemanları */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-1) !important;
+}
+
+p, span, li, td, th, label, div {
+  color: inherit;
+}
+
+/* Ant Design Typography */
+.ant-typography,
+.ant-typography h1,
+.ant-typography h2,
+.ant-typography h3,
+.ant-typography h4,
+.ant-typography p,
+.ant-typography span {
+  color: var(--text-1) !important;
+}
+
+.ant-typography.ant-typography-secondary {
+  color: var(--text-2) !important;
+}
+
+/* Input içindeki yazı (InputNumber dahil) */
+.ant-input-number-input,
+.ant-input-number {
+  background: #111111 !important;
+  color: var(--text-1) !important;
+}
+
+.ant-picker-input > input {
+  color: var(--text-1) !important;
+}
+
+.ant-select-selection-item {
+  color: var(--text-1) !important;
+}
+
+/* Form açıklama / validation mesajları */
+.ant-form-item-explain,
+.ant-form-item-explain-error {
+  color: #ff6b6b !important;
+}
+
+.ant-form-item-explain-success {
+  color: #52c41a !important;
+}
+
+/* Descriptions bileşeni */
+.ant-descriptions-item-label {
+  background: #111111 !important;
+  color: var(--text-2) !important;
+}
+
+.ant-descriptions-item-content {
+  background: #1a1a1a !important;
+  color: var(--text-1) !important;
+}
+
+.ant-descriptions-view {
+  border-color: var(--border) !important;
+}
+
+.ant-descriptions-row > th,
+.ant-descriptions-row > td {
+  border-color: var(--border) !important;
+}
+
+/* Divider yazısı */
+.ant-divider {
+  border-color: var(--border) !important;
+  color: var(--text-3) !important;
+}
+
+/* Alert bileşeni */
+.ant-alert {
+  background: #1a1a1a !important;
+  border-color: var(--border-md) !important;
+}
+
+.ant-alert-message {
+  color: var(--text-1) !important;
+}
+
+.ant-alert-description {
+  color: var(--text-2) !important;
+}
+
+/* Upload bileşeni */
+.ant-upload {
+  color: var(--text-2) !important;
+}
+
+.ant-upload-list-item-name {
+  color: var(--text-1) !important;
+}
+
+/* Collapse / Accordion */
+.ant-collapse {
+  background: var(--bg-card) !important;
+  border-color: var(--border) !important;
+}
+
+.ant-collapse-header {
+  color: var(--text-1) !important;
+}
+
+.ant-collapse-content {
+  background: #111111 !important;
+  border-color: var(--border) !important;
+  color: var(--text-1) !important;
+}
+
+/* PageHeader / Pro-layout başlıkları */
+.ant-page-header-heading-title,
+.ant-pro-page-container-warp-page-header .ant-page-header-heading-title {
+  color: var(--text-1) !important;
+}
+
+.ant-page-header-heading-sub-title {
+  color: var(--text-2) !important;
+}
+
+.ant-page-header {
+  background: transparent !important;
+  color: var(--text-1) !important;
+}
+
+/* Radio butonu */
+.ant-radio-wrapper {
+  color: var(--text-1) !important;
+}
+
+.ant-radio-inner {
+  background: #111111 !important;
+  border-color: var(--border-md) !important;
+}
+
+/* Breadcrumb */
+.ant-breadcrumb,
+.ant-breadcrumb a,
+.ant-breadcrumb span {
+  color: var(--text-2) !important;
+}
+
+/* Message / Notification popup */
+.ant-message-notice-content {
+  background: #1a1a1a !important;
+  color: var(--text-1) !important;
+  border: 1px solid var(--border-md) !important;
+}
+
+/* Popover içi */
+.ant-popover-title {
+  color: var(--text-1) !important;
+  border-color: var(--border) !important;
+}
+
+.ant-popover-inner-content {
+  color: var(--text-1) !important;
+}
+
+.ant-popover-message-title {
+  color: var(--text-1) !important;
+}
+
+/* Drawer başlık ve içerik */
+.ant-drawer-title {
+  color: var(--text-1) !important;
+}
+
+.ant-drawer-close {
+  color: var(--text-2) !important;
+}
+
+.ant-drawer-body {
+  color: var(--text-1) !important;
+}
+
+/* Result sayfası */
+.ant-result-title {
+  color: var(--text-1) !important;
+}
+
+.ant-result-subtitle {
+  color: var(--text-2) !important;
+}
+
+/* Steps */
+.ant-steps-item-title {
+  color: var(--text-1) !important;
+}
+
+.ant-steps-item-description {
+  color: var(--text-2) !important;
+}
+
+/* Ayarlar sayfasındaki TabsContent satırları */
+.ant-list-item-meta-title {
+  color: var(--text-1) !important;
+}
+
+.ant-list-item-meta-description {
+  color: var(--text-2) !important;
+}
+
+.ant-list-item {
+  color: var(--text-1) !important;
+  border-color: var(--border) !important;
+}
+
+/* Sider menü yazıları — light theme'de siyah kalıyor */
+.ant-menu-light .ant-menu-item,
+.ant-menu-light .ant-menu-submenu-title {
+  color: rgba(255,255,255,0.65) !important;
+}
+
+/* Statistic value rengi override (siyah kalabilir) */
+.ant-statistic-content-value {
+  color: var(--text-1) !important;
+}
+
+/* Card meta */
+.ant-card-meta-title {
+  color: var(--text-1) !important;
+}
+
+.ant-card-meta-description {
+  color: var(--text-2) !important;
+}
+
+/* Input group addon */
+.ant-input-group-addon {
+  background: #1a1a1a !important;
+  border-color: var(--border-md) !important;
+  color: var(--text-2) !important;
+}
+
+/* InputNumber handler */
+.ant-input-number-handler-wrap {
+  background: #1a1a1a !important;
+  border-color: var(--border) !important;
+}
+
+.ant-input-number-handler {
+  border-color: var(--border) !important;
+  color: var(--text-2) !important;
+}
+
+/* ══════════════════════════════════════
+   EK KOYU-RENK OVERRIDE'LAR
+   (Inline siyah/koyu renkleri ezen global kurallar)
+   ══════════════════════════════════════ */
+
+/* Form etiketleri */
+.ant-form-item-label > label {
+  color: var(--text-1) !important;
+}
+
+/* Tablo hücre yazıları */
+.ant-table-cell,
+.ant-table-tbody > tr > td {
+  color: var(--text-1) !important;
+}
+
+/* Tablo başlık yazıları */
+.ant-table-thead > tr > th {
+  color: var(--text-1) !important;
+  background: #1a1a1a !important;
+  border-bottom-color: var(--border-md) !important;
+}
+
+/* Hover satır rengi */
+.ant-table-tbody > tr.ant-table-row:hover > td {
+  background: var(--bg-hover) !important;
+}
+
+/* Tabs sekme yazıları */
+.ant-tabs-tab {
+  color: var(--text-2) !important;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--gold) !important;
+}
+.ant-tabs-ink-bar {
+  background: var(--gold) !important;
+}
+
+/* Select seçenek metin rengi */
+.ant-select-item-option-content,
+.ant-select-item {
+  color: var(--text-1) !important;
+}
+.ant-select-dropdown {
+  background: #1a1a1a !important;
+  border: 1px solid var(--border-md) !important;
+}
+.ant-select-item-option-active,
+.ant-select-item-option-selected {
+  background: var(--bg-hover) !important;
+}
+
+/* Checkbox ve Radio yazıları */
+.ant-checkbox-wrapper,
+.ant-radio-wrapper {
+  color: var(--text-1) !important;
+}
+
+/* Modal başlık ve içerik */
+.ant-modal-title {
+  color: var(--text-1) !important;
+}
+.ant-modal-content {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-md) !important;
+}
+.ant-modal-header {
+  background: var(--bg-card) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+.ant-modal-footer {
+  background: var(--bg-card) !important;
+  border-top: 1px solid var(--border) !important;
+}
+
+/* Tooltip */
+.ant-tooltip-inner {
+  background: #2a2a2a !important;
+  color: var(--text-1) !important;
+}
+
+/* Tag */
+.ant-tag {
+  border-color: var(--border-md) !important;
+}
+
+/* Pagination */
+.ant-pagination-item a,
+.ant-pagination-item-link {
+  color: var(--text-2) !important;
+}
+.ant-pagination-item-active a {
+  color: var(--gold) !important;
+}
+.ant-pagination-item-active {
+  border-color: var(--gold) !important;
+  background: transparent !important;
+}
+
+/* Divider yazısı */
+.ant-divider-inner-text {
+  color: var(--text-2) !important;
+}
+
+/* Table summary / footer */
+.ant-table-summary > tr > td {
+  color: var(--text-1) !important;
+  background: #1a1a1a !important;
+}
+
+/* Empty state metni */
+.ant-empty-description {
+  color: var(--text-3) !important;
+}
+
+/* Picker dropdown */
+.ant-picker-panel-container {
+  background: #1a1a1a !important;
+  border: 1px solid var(--border-md) !important;
+}
+.ant-picker-header,
+.ant-picker-header button,
+.ant-picker-content th,
+.ant-picker-cell {
+  color: var(--text-1) !important;
+}
+.ant-picker-cell-in-view {
+  color: var(--text-1) !important;
+}
+.ant-picker-cell-selected .ant-picker-cell-inner {
+  background: var(--gold) !important;
+  color: #000 !important;
+}
+
+/* whiteBox içindeki p ve span yazılar */
+.whiteBox p,
+.whiteBox span:not([class]),
+.whiteBox label {
+  color: var(--text-1) !important;
+}
+
+/* Descriptions label & value */
+.ant-descriptions-item-label,
+.ant-descriptions-item-content {
+  color: var(--text-1) !important;
+  background: transparent !important;
+}
+.ant-descriptions-bordered .ant-descriptions-item-label {
+  background: #1a1a1a !important;
+}
+
+/* Popconfirm (silme onayı) */
+.ant-popconfirm-inner-content,
+.ant-popconfirm-message,
+.ant-popconfirm-title,
+.ant-popconfirm-description {
+  color: var(--text-1) !important;
+}
+.ant-popover-inner {
+  background: #1f1f1f !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+}
+.ant-popover-inner-content {
+  color: var(--text-1) !important;
+}
+.ant-popover-message-title {
+  color: var(--text-1) !important;
+}
+.ant-popconfirm-message-icon .anticon-exclamation-circle {
+  color: #faad14 !important;
+}
